@@ -1,0 +1,23 @@
+Relembrando o Básico: Na multiplicação de matrizes, você não multiplica elemento por elemento na mesma posição.
+Você multiplica uma linha da primeira matriz por uma coluna da segunda matriz.
+A fórmula formal do elemento da matriz resultante
+
+Na prática, isso significa que precisamos de três loops aninhados: um para as linhas de A, um para as colunas de B, e um terceiro (o índice k) para "correr" pelos elementos dessa linha/coluna e somá-los.
+
+pontos importantes
+
+A multiplicação é valida se somente se:
+
+----------
+C1 = L2
+----------
+
+Onde C1 é o número de colunas da primeira matriz e L2 é o número de linhas da segunda matriz.
+
+O tamanho da matriz resultante é dado por:
+
+----------
+R = L1 x C2
+----------
+
+Onde L1 é o número de linhas da primeira matriz e C2 é o número de colunas da segunda matriz.

@@ -1,0 +1,26 @@
+Aula 01 - 25/02
+
+● Menor número de um array e sua posição -
+https://judge.beecrowd.com/pt/problems/view/1180
+
+Chegamos até aqui -> ● Acima da matriz diagonal -
+https://judge.beecrowd.com/pt/problems/view/1183
+* Sugestão: Fazer matriz diagonal inversa dps desse
+
+Exemplo: Multiplicação de matrizes -
+https://github.com/tgfb/pif_cesar_school/blob/main/2_arraysEmatrizes/multiplicacaoMatrizes.c
+- Fazer no papel
+
+
+---------- PARA CASA ----------
+
+Inversão de Array: Inverter os elementos de um array "na mão" (sem criar um segundo array).
+Ex: array = [1, 2, 3, 4, 5] -> array = [5, 4, 3, 2, 1]
+
+Remover Duplicatas: Dado um array ordenado, remova os elementos repetidos.
+Ex: array = [1, 1, 2, 3, 3, 4] -> array = [1, 2, 3, 4]
+
+Rotação de Elementos: Mover todos os elementos uma posição para a direita (o último volta para a primeira posição). Muito usado em lógica de carrossel de imagens ou filas circulares.
+
+---------- MATERIAL EXTRA ----------
+https://excalidraw.com/?element=wdWl0xWhKO-anBHBfO3Qa#room=4c0bc517bb42ecbbdeaf,EkJVXZLP_sL3RyfqVskfMQ
