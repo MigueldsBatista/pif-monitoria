@@ -9,7 +9,7 @@ https://judge.beecrowd.com/pt/problems/view/1183
 
 Exemplo: Multiplicação de matrizes -
 https://github.com/tgfb/pif_cesar_school/blob/main/2_arraysEmatrizes/multiplicacaoMatrizes.c
-- Fazer no papel
+Sugestão -> Fazer no papel
 
 
 ---------- PARA CASA ----------
@@ -24,3 +24,116 @@ Rotação de Elementos: Mover todos os elementos uma posição para a direita (o
 
 ---------- MATERIAL EXTRA ----------
 https://excalidraw.com/?element=wdWl0xWhKO-anBHBfO3Qa#room=4c0bc517bb42ecbbdeaf,EkJVXZLP_sL3RyfqVskfMQ
+
+1) Fácil — Vetor: contar elementos maiores que a média anterior
+A) Implemente uma função que receba um vetor de inteiros V e seu tamanho N como
+parâmetros.
+A função deve retornar quantos elementos do vetor são estritamente maiores que a média
+aritmética dos elementos anteriores.
+Regras:
+● A posição 0 não deve ser considerada, pois não possui elementos anteriores.
+● Se N < 2, retornar 0.
+
+Exemplo:
+[4, 7, 3, 10]
+● 7 > média(4) → conta
+● 3 > média(4,7) → não conta
+● 10 > média(4,7,3) → conta
+Retorno: 2
+
+B) Implemente uma função main() que:
+1. declara um vetor de tamanho N já preenchido com valores quaisquer;
+2. chama a função definida acima;
+3. imprime o resultado.
+
+2) Fácil/Médio — Matriz: verificar se todas as linhas estão em ordem
+crescente
+A) Implemente uma função que receba um inteiro N e uma matriz quadrada N x N de inteiros
+como parâmetros.
+A função deve retornar:
+
+● 1, se todas as linhas da matriz estiverem em ordem estritamente crescente da
+esquerda para a direita;
+● 0, caso contrário.
+
+Regras:
+● Considere N > 0.
+● Uma linha é estritamente crescente se, para toda coluna válida j, vale: mat[i][j] <
+mat[i][j+1].
+
+Exemplo:
+
+Retorno: 1
+B) Implemente uma função main() que:
+1. define uma matriz N x N já preenchida;
+2. chama a função;
+3. imprime o resultado.
+
+3) Médio — Vetor: remover repetições consecutivas
+A) Implemente uma função que receba:
+● um vetor de inteiros V,
+● seu tamanho N,
+● e um segundo vetor R para saída.
+
+A função deve copiar para R apenas os elementos de V sem repetições consecutivas,
+preservando a ordem, e retornar o novo tamanho de R.
+Exemplo:
+Entrada: [5, 5, 5, 2, 2, 7, 3, 3, 1]
+Saída em R: [5, 2, 7, 3, 1]
+Retorno: 5
+Regras:
+● Se N == 0, retornar 0.
+
+B) Implemente uma função main() que:
+1. declara um vetor original já preenchido;
+2. declara um vetor de saída com tamanho suficiente;
+3. chama a função;
+4. imprime o vetor resultante e seu tamanho.
+
+4) Médio/Difícil — Matriz: linha com mais mudanças de sinal
+A) Implemente uma função que receba um inteiro N e uma matriz quadrada N x N de inteiros.
+A função deve retornar o índice da linha que possui a maior quantidade de mudanças de
+sinal entre elementos consecutivos.
+Considere que há mudança de sinal entre dois elementos consecutivos a e b quando:
+● um é positivo e o outro é negativo.
+
+Regras:
+● O valor 0 não conta como positivo nem negativo, então qualquer comparação
+envolvendo zero não gera mudança de sinal.
+● Em caso de empate, retornar o índice da primeira linha encontrada.
+
+● Considere N > 0.
+
+Exemplo de linha:
+[4, -2, -7, 3, 0, -1]
+Mudanças de sinal:
+● 4 -> -2 → sim
+● -2 -> -7 → não
+● -7 -> 3 → sim
+● 3 -> 0 → não
+● 0 -> -1 → não
+Total: 2
+
+B) Implemente uma função main() que:
+1. define uma matriz já preenchida;
+2. chama a função;
+3. imprime o índice retornado.
+
+5) Difícil — Vetor + Matriz: coluna com menor soma ponderada
+A) Implemente uma função que receba:
+● um inteiro N,
+● uma matriz quadrada N x N de reais,
+● e um vetor de reais P de tamanho N.
+
+Para cada coluna j, calcule a soma ponderada:
+
+A função deve retornar o índice da coluna que possui a menor soma ponderada.
+Regras:
+● Em caso de empate, retornar a primeira coluna encontrada.
+● Considere N > 0.
+
+B) Implemente uma função main() que:
+1. define uma matriz N x N de reais já preenchida;
+2. define um vetor de pesos P já preenchido;
+3. chama a função;
+4. imprime o índice da coluna retornada.
