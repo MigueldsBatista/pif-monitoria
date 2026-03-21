@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include <stdbool.h>
 
 // funcao que recebe uma string e retorna a versão maiscula
@@ -29,12 +30,6 @@ Exemplos que não são palíndromos:
 */
 
 
-
-
-
-
-
-
 int is_lower(char letter){
     return (letter >= 'a' && letter <= 'z');
 }
@@ -47,23 +42,21 @@ char char_to_upper(char letter){
     return letter;
 }
 
-bool is_palindromo(char *phrase, int N){
-    for (int i = 0, j = N - 1; i < N && j > 0; i++, j--){
+int is_palindromo(char *phrase, int N){
+    
+    for (int i = 0, j = N - 1;i < N && j > 0;i++, j--){
         
-        while (phrase[i] == ' ') i++;
-        while (phrase[j] == ' ') j--;
-        
-        if(phrase[i] != phrase[j]){
-            return false;
+        if(*(phrase + i) != *(phrase + j)){
+            return 0;
         };
     }
 
-    return true;
+    return 1;
 }
 
 
 int main(){
-    char phrase[] = "subi no onibus";
+    char phrase[] = "subinoonibus";
     
     int result = is_palindromo(phrase, sizeof(phrase) - 1);
 

@@ -3,12 +3,12 @@
 #include <string.h>
 #include <stdbool.h>
 
+
 // funcao que recebe uma string e retorna a versão maiscula
 
 // char[] toUpper(char *string, int N);
 
 // Nivel 1, ver se é (Exemplo: "arara") // SEM ESPAÇO // SEM CHAR MAIUSCULO
-
 
 // Nivel 2 - Desconsiderar espaço (Exemplo: "ame o poema")
 
@@ -33,39 +33,39 @@ Exemplos que não são palíndromos:
 
 
 
+// int is_lower(char letter){
+//     return (letter >= 'a' && letter <= 'z');
+// }
 
+// char char_to_upper(char letter){
+//     if(is_lower(letter)){
+//         return letter - ('a' - 'A');
+//     }
 
-int is_lower(char letter){
-    return (letter >= 'a' && letter <= 'z');
-}
+//     return letter;
+// }
 
-char char_to_upper(char letter){
-    if(is_lower(letter)){
-        return letter - ('a' - 'A');
+int palindromo(char *phrase, int N){
+    char *left = phrase;
+    char *right = phrase + N - 1;
+
+    while (left < right){
+        if(*left != *right){
+            return 0;
+        }
+
+        left++;
+        right--;
     }
-
-    return letter;
-}
-
-bool is_palindromo(char *phrase, int N){
-    for (int i = 0, j = N - 1; i < N && j > 0; i++, j--){
-        
-        while (phrase[i] == ' ') i++;
-        while (phrase[j] == ' ') j--;
-        
-        if(phrase[i] != phrase[j]){
-            return false;
-        };
-    }
-
-    return true;
+    
+    return 1;
 }
 
 
 int main(){
-    char phrase[] = "subi no onibus";
+    char phrase[] = "subinoonibus";
     
-    int result = is_palindromo(phrase, sizeof(phrase) - 1);
+    int result = palindromo(phrase, sizeof(phrase) - 1);
 
     printf("%s \n", result ? "Palindromo" : "Não Palíndromo");
 

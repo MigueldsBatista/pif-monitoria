@@ -1,0 +1,1 @@
+'minha frase'.upper()

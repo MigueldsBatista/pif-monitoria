@@ -14,7 +14,7 @@ char char_to_upper(char letter){
     return letter;
 }
 
-void is_palindromo(char *phrase, int N){
+void to_upper(char *phrase, int N){
     for (int i = 0; i < N; i++){
         phrase[i] = char_to_upper(phrase[i]);
     }
@@ -22,9 +22,9 @@ void is_palindromo(char *phrase, int N){
 
 
 int main(){
-    char phrase[] = "subi no onibus";
+    char phrase[] = "sUbi no onibus";
     
-    is_palindromo(phrase, sizeof(phrase) - 1);
+    to_upper(phrase, sizeof(phrase) - 1);
 
     printf("%s \n", phrase);
 

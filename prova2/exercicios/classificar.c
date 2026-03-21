@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * Classifica os elementos de um vetor de inteiros em positivos, negativos e zeros.
  *
@@ -39,10 +41,10 @@
  }
 
  void main(){
-    int *positivos = 0;
-    int *negativos = 0;
-    int *zeros = 0;
-
+    int positivos = 0;
+    int negativos = 0;
+    int zeros = 0;
+    int vogais = 0, consoantes = 0;
     int vetor[5] = {0, 0, -1, -2, 3};
 
     calcular_metricas(vetor, 5, &positivos, &negativos, &zeros);
