@@ -29,12 +29,6 @@ Exemplos que não são palíndromos:
 */
 
 
-
-
-
-
-
-
 int is_lower(char letter){
     return (letter >= 'a' && letter <= 'z');
 }

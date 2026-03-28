@@ -9,13 +9,11 @@
  * (1 * 3) + (2 * 4) = 3 + 8 = 11.
  */
 
-int produto_escalar(int *v1, int *v2, int N)
-{
+int produto_escalar(int *v1, int *v2, int N){
     int result = 0;
     
     for (int i = 0; i < N; i++){
         result += (*v1++) * (*v2++);
-        // result += *(v1 + i) * *(v2 + i) // Forma alternativa de resolver
     }
 
     return result;
@@ -24,6 +22,9 @@ int produto_escalar(int *v1, int *v2, int N)
 
 int main()
 {
+    int tamanho;
+    scanf("%d", &tamanho);
+    
     int V1[2] = {1, 2};
     int V2[2] = {3, 4};
 
